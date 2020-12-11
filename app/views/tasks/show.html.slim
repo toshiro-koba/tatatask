@@ -1,2 +1,21 @@
-h1 Tasks#show
-p Find me in app/views/tasks/show.html.slim
+h1 タスクの詳細
+
+.nav.justify-content-end
+  = link_to '一覧', tasks_path, class: 'nav-link'
+table.table.table-hover
+  tbody
+    tr
+      th= Task.human_attribute_name(:id)
+      th= @task.id
+    tr
+      th= Task.human_attribute_name(:name)
+      th= @task.name
+    tr
+      th= Task.human_attribute_name(:description)
+      th= simple_format(h(@task.description), {}, sanitize: false, wrapper_tag: "div")
+    tr
+      th= Task.human_attribute_name(:create_at)
+      th= @task.create_at
+    tr
+      th= Task.human_attribute_name(:update_at)
+      th= @task.update_at
