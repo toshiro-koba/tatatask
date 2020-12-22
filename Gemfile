@@ -59,3 +59,5 @@ gem 'html2slim'
 gem 'bootstrap'
 
 gem 'pry-rails'
+
+gem 'rails_autolink'
