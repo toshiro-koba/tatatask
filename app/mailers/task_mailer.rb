@@ -5,7 +5,7 @@ class TaskMailer < ApplicationMailer
     @task = task
     mail(
       subject: 'タスク作成完了メール',
-      to: 'kobato.231.0625@gmail.com',
+      to: 'user@example.com',
       from: 'taskleaf@example.com'
     )
   end
